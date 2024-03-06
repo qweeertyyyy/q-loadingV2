@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "qwerty";
+    src: url('font/qwerty.otf');
+}
+
+body {
+    font-family: qwerty;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    background-image: url('image/image1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+
+.loader-container {
+    position: relative;
+}
+
+.loader {
+    border: 6px solid rgba(245, 150, 170, 0.2);
+    border-top: 6px solid #f06292;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.copyright {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-family: qwerty;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.button-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: flex-end;
+    z-index: 9999;
+}
+
+.button {
+    background-color: #f06292;
+    border: 2px solid #f06292;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #ec407a;
+    box-shadow: 0 0 20px rgba(240, 98, 146, 0.5);
+    color: #ffffff;
+}
+
+#cursor {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #f06292;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@keyframes spin {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    100% { transform: translateX(-50%) rotate(360deg); }
+}
